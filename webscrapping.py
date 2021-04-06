@@ -12,7 +12,7 @@ cred = credentials.Certificate(os.path.dirname(os.path.realpath(__file__))+"\cov
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://covideemakerthon-default-rtdb.firebaseio.com/'
 })
-startdate = date(2021, 4, 5)   # start date
+startdate = date(2021, 3, 5)   # start date
 enddate = date(2021, 4, 6)   # end date
 malaymonth = ["januari", "februari", "mac", "april", "may", "jun","julai","ogos","september","oktober","november","disember"]
 delta = enddate - startdate
@@ -32,17 +32,23 @@ for i in range(delta.days + 1):
         field.append(tempstring)
     database = [] 
     test.pop(0)
+    negeri = []
     for row in test:
         col = row.findAll('td')
         datum = {}
+        numberdata = {}
         rec = []
         i=0
         for c in col:
             tempstring = c.text.replace("\xa0","").replace(",","").replace("*","")
             tempstring = re.sub(r'\([^)]*\)', '', tempstring)
-            datum[field[i]] = tempstring
+            if i == 0:
+                datum[field[i]] = tempstring
+            else:
+                numberdata[field[i]] = tempstring
             i=i+1
         if datum:
+            datum["NumberOfCase"]=numberdata
             database.append(datum)
     ref = db.reference("/"+x.strftime("%Y")+"-"+ str(x.month) +"-"+x.strftime("%d")+"/")
     ref.set(json.dumps(database))
