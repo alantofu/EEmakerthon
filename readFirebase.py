@@ -15,8 +15,5 @@ delta = enddate - startdate
 for i in range(delta.days + 1):
     x = startdate + timedelta(days=i)
     ref = db.reference("/"+x.strftime("%Y")+"-"+ str(x.month) +"-"+x.strftime("%d")+"/")
-    data  = json.loads(ref.get())
-    for states in data:
-        for numberdata in states['NEGERI']
-            print(numberdata[])
-    #print(data[1]['NEGERI'])
+    data  = ref.get()
+    print(data['JOHOR']['BILANGAN_KES_KUMULATIF'])#this is a quick sample on how to access the data
