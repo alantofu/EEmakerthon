@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+yoon/cov_app/BuildConfig.java
+ yoon.cov_app.BuildConfig
