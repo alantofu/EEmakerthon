@@ -24,6 +24,7 @@ environment:
   http:
   charts_flutter:
 
+
 dependencies:
   flutter:
     sdk: flutter
