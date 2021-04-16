@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "744599149000",
+    "project_id": "e-makerthon-68e65",
+    "storage_bucket": "e-makerthon-68e65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744599149000:android:ea16298a96385e38e948fd",
+        "android_client_info": {
+          "package_name": "yoon.cov_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744599149000-2a36uu3o1rg4bmhglel2b42i30fpogu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdqGnCE4Kget3Og4Z-ExpRrvQtwvs19mA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744599149000-2a36uu3o1rg4bmhglel2b42i30fpogu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

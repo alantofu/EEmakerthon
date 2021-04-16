@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cov_app/pages/statePage.dart';
 import 'package:cov_app/panels/malaysiapanel.dart';
 import 'package:cov_app/panels/mostcasesbystates.dart';
 import 'package:cov_app/panels/infopanel.dart';
@@ -65,13 +66,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text('Malaysia', style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),),
-                  Container(
-                      decoration: BoxDecoration(
-                        color: primaryBlack,
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      padding: EdgeInsets.all(10.0),
-                      child: Text('Regional', style: TextStyle(fontSize: 14.0, color: Colors.white, fontWeight: FontWeight.bold),)),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>StatePage()));
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                          color: primaryBlack,
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        padding: EdgeInsets.all(10.0),
+                        child: Text('Regional', style: TextStyle(fontSize: 14.0, color: Colors.white, fontWeight: FontWeight.bold),)),
+                  ),
 
                 ],
               ),
